@@ -1,8 +1,12 @@
 <template name="postItem">
 	<div class="post">
 		<div class="post-content">
-			<h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+			<h3>Title of post: {{title}}</h3>	
+			<h3><a href="{{url}}">{{url}}</a></h3>
+			<h4><span>Authur: {{author}}</span></h4>
+			<h4><span>Content: {{content}}</span></h4>
 		</div>
+		<button type="button" class='likeButton'>LIKE</button>
 		<a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a>
 	</div>
 </template>
