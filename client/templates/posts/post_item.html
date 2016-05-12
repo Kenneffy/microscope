@@ -1,12 +1,15 @@
 <template name="postItem">
 	<div class="post">
+		<a href="#" class="upvote btn btn-default">⇧</a>
 		<div class="post-content">
-			<h3>Title of post: {{title}}</h3>	
-			<h3><a href="{{url}}">{{url}}</a></h3>
-			<h4><span>Authur: {{author}}</span></h4>
-			<h4><span>Content: {{content}}</span></h4>
+			<h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+			<p>
+				{{votes}} Votes,
+				submitted by {{author}},
+				<a href="{{pathFor 'postPage'}}">{{commentsCount}} comments</a>
+				{{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
+			</p>
 		</div>
-		<button type="button" class='likeButton'>LIKE</button>
 		<a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a>
 	</div>
 </template>
