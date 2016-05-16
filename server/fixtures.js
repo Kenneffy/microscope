@@ -7,10 +7,13 @@ var kenId = Meteor.users.insert({
 	profile: { name: 'Kenneth Yee' }
 });
 var ken = Meteor.users.findOne(kenId);
+
 var benId = Meteor.users.insert({
 	profile: { name: 'Ben Smith' }
 });
 var ben = Meteor.users.findOne(benId);
+
+
 var telescopeId = Posts.insert({
 	title: 'Introducing Telescope',
 	userId: ben._id,
